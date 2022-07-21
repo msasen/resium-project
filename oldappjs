@@ -1,0 +1,61 @@
+// import { configureStore, createSlice, PayloadAction } from "@reduxjs/toolkit";
+// import {
+//   Provider,
+//   TypedUseSelectorHook,
+//   useDispatch,
+//   useSelector
+// } from "react-redux";
+
+// const counterSlice = createSlice({
+//   name: "counter",
+//   initialState: {
+//     value: 0
+//   },
+//   reducers: {
+//     increment: (s, action: PayloadAction<number>) => {
+//       return {
+//         ...s,
+//         value: s.value + action.payload
+//       };
+//     }
+//   }
+// });
+
+// const { increment } = counterSlice.actions;
+
+// const store = configureStore({
+//   reducer: {
+//     counter: counterSlice.reducer
+//   }
+// });
+
+// type RootState = ReturnType<typeof store.getState>;
+
+// type AppDispatch = typeof store.dispatch;
+
+// // const counterSelector = (state: RootState) => state.counter.value;
+
+// const useCounterDispatch = () => useDispatch<AppDispatch>();
+
+// const useCounterSelector: TypedUseSelectorHook<RootState> = useSelector;
+
+// function Counter() {
+//   const dispatch = useCounterDispatch();
+
+//   const value = useCounterSelector((state) => state.counter.value);
+
+//   return (
+//     <div className="App">
+//       <button onClick={() => dispatch(increment(3))}>click me</button>
+//       <h2>{value}</h2>
+//     </div>
+//   );
+// }
+
+// export default function App() {
+//   return (
+//     <Provider store={store}>
+//       <Counter />
+//     </Provider>
+//   );
+// }
