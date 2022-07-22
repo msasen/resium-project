@@ -5,10 +5,17 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "eslint .",
+    "format": "eslint --fix ."
   },
   "dependencies": {
+    "@emotion/core": "^10.3.1",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.9.1",
     "@reduxjs/toolkit": "^1.8.3",
+    "antd": "^4.21.7",
     "cesium": "1.95.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -16,6 +23,9 @@
     "resium": "^1.14.3"
   },
   "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-config-reearth": "https://github.com/reearth/eslint-config-reearth.git#937f06f7a3e23702dfa8530ce5b5bd1dc4925763",
+    "prettier": "^2.7.1",
     "@types/node": "^18.0.6",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",

@@ -1,10 +1,11 @@
+import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
 import { configureStore } from "@reduxjs/toolkit";
 
-import counterSlice from "../components/counter/counterSlice";
+import mapSlice from "@/store/slice/mapSlice";
 
 const store = configureStore({
   reducer: {
-    counter: counterSlice.reducer,
+    map: mapSlice.reducer,
   },
 });
 

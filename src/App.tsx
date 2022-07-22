@@ -1,9 +1,9 @@
-import Counter from "@/components/counter/Counter";
+import Map from "@/modules/Map/Index";
 
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <Map />
     </div>
   );
 }

@@ -1,0 +1,6 @@
+extends:
+  - reearth
+overrides:
+  - files: docs/generator/**/*.ts
+    extends:
+      - reearth/node
