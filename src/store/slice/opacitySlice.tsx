@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 import { layer } from "@/data/opacity";
-import { ILayer } from "@/interfaces/Opacity";
+import { ILayer } from "@/interfaces/Layer";
 
 const initialState = layer;
 const opacitySlice = createSlice({

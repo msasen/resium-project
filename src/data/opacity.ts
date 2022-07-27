@@ -1,4 +1,4 @@
-import { ILayers } from "@/interfaces/Opacity";
+import { ILayers } from "@/interfaces/Layer";
 
 const layer: ILayers = {
   NatGeo_World_Map: {

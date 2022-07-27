@@ -1,4 +1,8 @@
-import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import {
+  TypedUseSelectorHook,
+  useDispatch as useReduxDispatch,
+  useSelector as useReduxSelector,
+} from "react-redux";
 
 import store from "@/store/index";
 
@@ -8,8 +12,8 @@ type AppDispatch = typeof store.dispatch;
 
 // const counterSelector = (state: RootState) => state.counter.value;
 
-const useCounterDispatch = () => useDispatch<AppDispatch>();
+const useDispatch = () => useReduxDispatch<AppDispatch>();
 
-const useCounterSelector: TypedUseSelectorHook<RootState> = useSelector;
+const useSelector: TypedUseSelectorHook<RootState> = useReduxSelector;
 
-export { useCounterDispatch, useCounterSelector };
+export { useDispatch, useSelector };

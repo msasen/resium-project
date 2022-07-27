@@ -1,5 +1,5 @@
 import { Icordinate, IcordinateHeader } from "@/interfaces/Iresium";
-
+// TODO2 Dataseti helpers olmadan çalışır hale getir
 const theWhiteHouse: Icordinate = {
   lat: -77.037088,
   lon: 38.897125,

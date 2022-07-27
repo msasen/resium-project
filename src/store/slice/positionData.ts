@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { IgetMousePointPosition, IgetMousePointPositionReducers } from "@/Toolbox/interface";
+import { IgetMousePointPosition, IgetMousePointPositionReducers } from "@/interfaces/Toolbox";
 
 const initialState: IgetMousePointPosition = {
   long: 0,
