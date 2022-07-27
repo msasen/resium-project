@@ -1,0 +1,31 @@
+"filename", "language", "TypeScript", "TypeScript React", "JSON", "comment", "blank", "total"
+"c:\Users\musa.sen\Desktop\project\resium-project\src\App.tsx", "TypeScript React", 0, 12, 0, 0, 5, 17
+"c:\Users\musa.sen\Desktop\project\resium-project\src\components\AddImageryProvider\Index.tsx", "TypeScript React", 0, 22, 0, 0, 4, 26
+"c:\Users\musa.sen\Desktop\project\resium-project\src\components\CameraAnimation\Index.tsx", "TypeScript React", 0, 10, 0, 0, 5, 15
+"c:\Users\musa.sen\Desktop\project\resium-project\src\components\CheckBoxForMenu\Index.tsx", "TypeScript React", 0, 35, 0, 0, 5, 40
+"c:\Users\musa.sen\Desktop\project\resium-project\src\components\DropdownItems\Index.tsx", "TypeScript React", 0, 12, 0, 0, 4, 16
+"c:\Users\musa.sen\Desktop\project\resium-project\src\components\Map\Index.tsx", "TypeScript React", 0, 17, 0, 0, 5, 22
+"c:\Users\musa.sen\Desktop\project\resium-project\src\container\menu.tsx", "TypeScript React", 0, 65, 0, 1, 4, 70
+"c:\Users\musa.sen\Desktop\project\resium-project\src\data\cordinate.ts", "TypeScript", 47, 0, 0, 0, 11, 58
+"c:\Users\musa.sen\Desktop\project\resium-project\src\data\opacity.ts", "TypeScript", 32, 0, 0, 0, 3, 35
+"c:\Users\musa.sen\Desktop\project\resium-project\src\data\titleset.json", "JSON", 0, 0, 124, 0, 0, 124
+"c:\Users\musa.sen\Desktop\project\resium-project\src\data\titleset.ts", "TypeScript", 84, 0, 0, 0, 3, 87
+"c:\Users\musa.sen\Desktop\project\resium-project\src\enum\index.ts", "TypeScript", 19, 0, 0, 0, 3, 22
+"c:\Users\musa.sen\Desktop\project\resium-project\src\helpers\convertCordinateListToDropdownItem.tsx", "TypeScript React", 0, 14, 0, 0, 4, 18
+"c:\Users\musa.sen\Desktop\project\resium-project\src\hooks\storeHook.ts", "TypeScript", 7, 0, 0, 1, 8, 16
+"c:\Users\musa.sen\Desktop\project\resium-project\src\interfaces\Iresium.ts", "TypeScript", 12, 0, 0, 0, 3, 15
+"c:\Users\musa.sen\Desktop\project\resium-project\src\interfaces\Ititleset.ts", "TypeScript", 50, 0, 0, 0, 11, 61
+"c:\Users\musa.sen\Desktop\project\resium-project\src\interfaces\Iui.ts", "TypeScript", 9, 0, 0, 0, 4, 13
+"c:\Users\musa.sen\Desktop\project\resium-project\src\interfaces\Opacity.ts", "TypeScript", 17, 0, 0, 0, 3, 20
+"c:\Users\musa.sen\Desktop\project\resium-project\src\main.tsx", "TypeScript React", 0, 13, 0, 0, 3, 16
+"c:\Users\musa.sen\Desktop\project\resium-project\src\modules\AddImageryProvider\Index.tsx", "TypeScript React", 0, 29, 0, 0, 3, 32
+"c:\Users\musa.sen\Desktop\project\resium-project\src\modules\Button\GoToButton.tsx", "TypeScript React", 0, 61, 0, 0, 4, 65
+"c:\Users\musa.sen\Desktop\project\resium-project\src\modules\CameraAnimation\Index.tsx", "TypeScript React", 0, 10, 0, 0, 5, 15
+"c:\Users\musa.sen\Desktop\project\resium-project\src\modules\Map\Index.tsx", "TypeScript React", 0, 17, 0, 0, 6, 23
+"c:\Users\musa.sen\Desktop\project\resium-project\src\modules\Slider\Index.tsx", "TypeScript React", 0, 51, 0, 1, 7, 59
+"c:\Users\musa.sen\Desktop\project\resium-project\src\store\index.ts", "TypeScript", 13, 0, 0, 0, 5, 18
+"c:\Users\musa.sen\Desktop\project\resium-project\src\store\slice\mapSlice.ts", "TypeScript", 22, 0, 0, 0, 5, 27
+"c:\Users\musa.sen\Desktop\project\resium-project\src\store\slice\menuSlice.tsx", "TypeScript React", 0, 17, 0, 0, 5, 22
+"c:\Users\musa.sen\Desktop\project\resium-project\src\store\slice\opacitySlice.tsx", "TypeScript React", 0, 53, 0, 0, 4, 57
+"c:\Users\musa.sen\Desktop\project\resium-project\src\vite-env.d.ts", "TypeScript", 0, 0, 0, 1, 1, 2
+"Total", "-", 312, 438, 124, 4, 133, 1011

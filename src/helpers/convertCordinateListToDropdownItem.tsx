@@ -3,7 +3,6 @@ import { IDropdownItems } from "@/interfaces/Iui";
 
 const DropdownItems: IDropdownItems = [];
 cordinateList.map(data => {
-  console.log(data);
   const { cordinate, id, logo, name } = data;
 
   const DropdownItem = {

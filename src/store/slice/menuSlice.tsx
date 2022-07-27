@@ -12,7 +12,7 @@ const menuSlice = createSlice({
     update: (state, action: PayloadAction<IDropdownItems>) => {
       return {
         ...state,
-        DropdownItem: [...state, action.payload],
+        GoToItem: [...state, action.payload],
       };
     },
   },
