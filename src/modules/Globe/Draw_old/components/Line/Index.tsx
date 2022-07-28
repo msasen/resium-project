@@ -2,11 +2,11 @@ import { Cartesian3, Color, PolylineDashMaterialProperty } from "cesium";
 import { Entity, PolylineGraphics } from "resium";
 
 import { useSelector } from "@/hooks/storeHook";
+import React from "react";
 
 const Line = () => {
   const drawline = useSelector(state => state.drawLinw);
   const { firstCordinate, secondCordinate } = drawline;
-  console.log(firstCordinate);
 
   return (
     <Entity

@@ -8,9 +8,10 @@ import { getMousePointPosition } from "@/helpers/getMousePointPosition";
 import { useDispatch } from "@/hooks/storeHook";
 import { Iref } from "@/interfaces/Toolbox";
 import CameraAnimation from "@/modules/Globe/CameraAnimation/Index";
-import Line from "@/modules/Globe/Draw/Line/Index";
+import Line from "@/modules/Globe/Draw_old/Line/Index";
 import positionSlice from "@/store/slice/positionData";
 
+import Draw from "../Draw/Index";
 import AddImageryProviderModule from "../ImageryLayer/Index";
 
 type Props = {};
@@ -35,15 +36,14 @@ const Map = (_args: Props) => {
    * */
   const dispatch = useDispatch();
   const handleMouseMoveEvent = (params: any) => {
-    const { endPosition } = params;
+    const { position } = params;
     if (getRef.current === null) return;
     const camera = getRef.current.cesiumElement.camera;
     const globe = getRef.current.cesiumElement.scene.globe;
-    const positionData: any = getMousePointPosition(camera, globe, endPosition);
+    const positionData: any = getMousePointPosition(camera, globe, position);
     // setPosition(positionData);
     const { update } = positionSlice.actions;
     dispatch(update(positionData));
-    console.log(positionData);
   };
 
   return (
@@ -56,10 +56,12 @@ const Map = (_args: Props) => {
       {/* <EventHandler ref={getRef} /> */}
       {/* mause hareket ettirildiğinde alt componentler yeniden render olmuyor. */}
       <ScreenSpaceEventHandler>
-        <ScreenSpaceEvent action={handleMouseMoveEvent} type={ScreenSpaceEventType.MOUSE_MOVE} />
+        <ScreenSpaceEvent action={handleMouseMoveEvent} type={ScreenSpaceEventType.LEFT_CLICK} />
       </ScreenSpaceEventHandler>
       <CameraAnimation />
       <Line />
+      <Draw />
+      {/* <Write /> */}
     </VieverResium>
   );
 };

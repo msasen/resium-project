@@ -1,6 +1,7 @@
 import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
 import { configureStore } from "@reduxjs/toolkit";
 
+import DrawSlice from "@/modules/Globe/Draw/store/DrawSlice";
 import mapSlice from "@/store/slice/mapSlice";
 
 import lineDrawSlice from "./slice/drawLine";
@@ -15,6 +16,7 @@ const store = configureStore({
     opacity: opacitySlice.reducer,
     position: positionSlice.reducer,
     drawLinw: lineDrawSlice.reducer,
+    drawSlice: DrawSlice.reducer,
   },
 });
 
