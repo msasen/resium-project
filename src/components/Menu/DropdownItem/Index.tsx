@@ -1,6 +1,6 @@
 import { Menu } from "antd";
 
-import { IDropdownItem } from "@/interfaces/Iui";
+import { IDropdownItem } from "@/interfaces/Menu/Index";
 
 const DropdownItem = (Args: IDropdownItem) => {
   const { icons, context } = Args;

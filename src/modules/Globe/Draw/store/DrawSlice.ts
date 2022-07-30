@@ -1,33 +1,38 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Color } from "cesium";
 
-import { data } from "./data";
-import { ICoordinates, IData, IFeature } from "./type";
+import { state, ICoordinates, IDrawings, IDrawWithColor } from "./state";
 
-const initialState: IData = data;
+const initialState: IDrawings = state;
 
 const DrawSlice = createSlice({
   name: "draw",
   initialState,
   reducers: {
-    addShape: (state, action: PayloadAction<IFeature>) => {
+    addShape: (state, action: PayloadAction<IDrawWithColor>) => {
       return {
         ...state,
-        features: [...state.features, action.payload],
+        drawings: [...state.drawings, action.payload],
       };
     },
     addPoitIOnLastLine: (s, action: PayloadAction<ICoordinates>) => {
-      const state: IData = s;
-      const lastNode = state.features[state.features.length - 1];
-      lastNode.geometry.coordinates.push(action.payload);
+      const state: IDrawings = s;
+      const lastNode = state.drawings[state.drawings.length - 1];
+      lastNode.color = Color.BLUE;
+      lastNode.data.features[0].geometry.coordinates.push(action.payload);
       return state;
     },
     addPoitIOnLastPolygon: (s, action: PayloadAction<ICoordinates>) => {
-      const state: IData = s;
-      state.features[state.features.length - 1].geometry.coordinates[
-        state.features[state.features.length - 1].geometry.coordinates.length - 1
+      const state: IDrawings = s;
+      state.drawings[state.drawings.length - 1].color = Color.RED;
+      state.drawings[state.drawings.length - 1].data.features[0].geometry.coordinates[
+        state.drawings[state.drawings.length - 1].data.features[0].geometry.coordinates.length - 1
       ] = action.payload;
-      const firstCoordinate = state.features[state.features.length - 1].geometry.coordinates[0];
-      state.features[state.features.length - 1].geometry.coordinates.push(firstCoordinate);
+      const firstCoordinate =
+        state.drawings[state.drawings.length - 1].data.features[0].geometry.coordinates[0];
+      state.drawings[state.drawings.length - 1].data.features[0].geometry.coordinates.push(
+        firstCoordinate,
+      );
       return state;
     },
     //Bur

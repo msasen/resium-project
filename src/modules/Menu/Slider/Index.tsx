@@ -2,7 +2,7 @@ import { Slider as AntdSlider } from "antd";
 
 import { Frame } from "@/enum";
 import { useDispatch } from "@/hooks/storeHook";
-import { ILayer } from "@/interfaces/Layer";
+import { ILayer } from "@/interfaces/globe/Layer";
 import opacitySlice from "@/store/slice/opacitySlice";
 
 type ISlider = {

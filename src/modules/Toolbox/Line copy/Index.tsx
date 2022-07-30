@@ -1,4 +1,3 @@
-import { Color } from "cesium";
 import { useEffect } from "react";
 
 import LineIcons from "@/components/Common/Icons/LineIcons";
@@ -6,25 +5,24 @@ import { ActiveButton } from "@/container/Toolbox/store/state";
 import toolBoxSlice from "@/container/Toolbox/store/toolBoxSlice";
 import { useDispatch, useSelector } from "@/hooks/storeHook";
 import DrawSlice from "@/modules/Globe/Draw/store/DrawSlice";
-import { ICoordinates, IDrawWithColor } from "@/modules/Globe/Draw/store/state";
+import { ICoordinates, IFeature } from "@/modules/Globe/Draw/store/type";
 import DrawingTools from "@/modules/Toolbox/DrawingTools/Index";
+import React from "react";
 
 type Props = {};
-const Feature: IDrawWithColor = {
-  data: {
-    type: "FeatureCollection",
-    features: [
-      {
-        type: "Feature",
-        properties: {},
-        geometry: {
-          type: "LineString",
-          coordinates: [],
-        },
-      },
-    ],
+const Feature: IFeature = {
+  type: "Feature",
+  properties: {},
+  geometry: {
+    type: "LineString",
+    coordinates: [],
   },
-  color: Color.YELLOW,
+  style: {
+    __comment: "all SVG styles allowed",
+    fill: "red",
+    "stroke-width": "3",
+    "fill-opacity": 0.6,
+  },
 };
 
 const Line = (_props: Props) => {

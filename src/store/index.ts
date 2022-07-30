@@ -1,7 +1,10 @@
 import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
 import { configureStore } from "@reduxjs/toolkit";
 
+import toolBoxSlice from "@/container/Toolbox/store/toolBoxSlice";
 import DrawSlice from "@/modules/Globe/Draw/store/DrawSlice";
+import drawingToolsSlice from "@/modules/Toolbox/DrawingTools/store/drawingToolsSlice";
+import styleToolsSlice from "@/modules/Toolbox/StyleTools/store/drawingToolsSlice";
 import mapSlice from "@/store/slice/mapSlice";
 
 import lineDrawSlice from "./slice/drawLine";
@@ -17,6 +20,9 @@ const store = configureStore({
     position: positionSlice.reducer,
     drawLinw: lineDrawSlice.reducer,
     drawSlice: DrawSlice.reducer,
+    toolBox: toolBoxSlice.reducer,
+    drawingTools: drawingToolsSlice.reducer,
+    styleTools: styleToolsSlice.reducer,
   },
 });
 

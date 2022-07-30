@@ -1,4 +1,4 @@
-import { ILayers } from "@/interfaces/Layer";
+import { ILayers } from "@/interfaces/globe/Layer";
 
 const layer: ILayers = {
   NatGeo_World_Map: {

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { IDrawLine, red } from "@/interfaces/Toolbox";
+import { IDrawLine, red } from "@/interfaces/Toolbox/Toolbox";
 
 const initialState: IDrawLine = {
   firstCordinate: {

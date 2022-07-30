@@ -1,3 +1,16 @@
+.flex {
+  display: flex;
+}
+
+.block {
+  display: inline;
+}
+
+#colorMenu {
+  position: absolute;
+  left: 40px;
+}
+
 #container {
   color: white;
   position: absolute;
@@ -5,19 +18,19 @@
   left: 0;
 }
 #container button {
+  background: #303336;
   margin-left: 5px;
   margin-top: 10px;
   width: 32px;
   height: 32px;
   border-radius: 14%;
-  background: #303336;
   color: #edffff;
   fill: #edffff;
   transition: 0.3s;
-  display: flex;
   border: 1px solid #444;
   justify-content: center;
   align-items: center;
+  margin-right: 3px;
 }
 #container button:hover {
   background: #1890ff;

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { Icordinate } from "@/interfaces/Iresium";
+import { Icordinate } from "@/interfaces/globe/Iresium";
 
 const initialState: Icordinate = {
   lon: 0.698874,

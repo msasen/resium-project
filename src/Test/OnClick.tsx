@@ -6,6 +6,7 @@ type Props = {};
 
 const OnClick = (_props: Props) => {
   const state = useSelector(store => store.drawSlice);
+  console.log(state);
   const dispatch = useDispatch();
   const { addPoitIOnLastLine } = DrawSlice.actions;
   const cord: ICoordinates = [44, 66];

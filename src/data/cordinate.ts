@@ -1,4 +1,4 @@
-import { Icordinate, IcordinateHeader } from "@/interfaces/Iresium";
+import { Icordinate, IcordinateHeader } from "@/interfaces/globe/Iresium";
 // TODO2 Dataseti helpers olmadan çalışır hale getir
 const theWhiteHouse: Icordinate = {
   lat: -77.037088,
@@ -16,7 +16,7 @@ const theWhiteHouseHeader: IcordinateHeader = {
 const mavinci: Icordinate = {
   lat: 32.737501,
   lon: 39.863055,
-  alt: 100,
+  alt: 10000,
 };
 
 const mavinciHeader: IcordinateHeader = {

@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import { Icordinate } from "./Iresium";
+import { Icordinate } from "../globe/Iresium";
 
 export type IDropdownItem = {
   key: number;

@@ -1,3 +1,5 @@
+import { Color } from "cesium";
+
 type ICoordinates = any[];
 
 export interface IGeometry {
@@ -9,8 +11,22 @@ export interface IFeature {
   properties: any;
   geometry: IGeometry;
 }
-export interface IData {
+export interface IDrawing {
   type: string;
   features: IFeature[];
 }
+export interface IDrawWithColor {
+  data: IDrawing;
+  color: Color;
+}
 export type { ICoordinates };
+
+export interface IDrawings {
+  drawings: IDrawWithColor[];
+}
+
+const state: IDrawings = {
+  drawings: [],
+};
+
+export { state };

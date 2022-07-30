@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 import { DropdownItems } from "@/helpers/convertCordinateListToDropdownItem";
-import { IDropdownItems } from "@/interfaces/Iui";
+import { IDropdownItems } from "@/interfaces/Menu/Index";
 
 const initialState = DropdownItems;
 

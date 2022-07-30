@@ -11,11 +11,13 @@ import "./style.css";
 
 import Line from "@/modules/Toolbox/Line/Index";
 import Polygon from "@/modules/Toolbox/Polygon/Indx";
+import StyleTools from "@/modules/Toolbox/StyleTools/Index";
 import Text from "@/modules/Toolbox/Text/Index";
 
 function Toolbox() {
   return (
     <div id="container">
+      <StyleTools />
       <Line />
       <Polygon />
       <Text />

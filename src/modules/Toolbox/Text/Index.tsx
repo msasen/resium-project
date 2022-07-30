@@ -4,7 +4,7 @@ TextIcon;
 type Props = {};
 
 const Text = (_props: Props) => {
-  return <button>a</button>;
+  return <button className="flex">a</button>;
 };
 
 export default Text;

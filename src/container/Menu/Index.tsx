@@ -4,7 +4,7 @@ import { Menu as AntMenu } from "antd";
 import CheckBoxForMenu from "@/components/Menu/FrameControl/Index";
 import { Frame } from "@/enum";
 import { useDispatch, useSelector } from "@/hooks/storeHook";
-import { Icordinate } from "@/interfaces/Iresium";
+import { Icordinate } from "@/interfaces/globe/Iresium";
 import mapSlice from "@/store/slice/mapSlice";
 // import { IgetMousePointPosition } from "@/Toolbox/interface";
 
@@ -22,7 +22,7 @@ const Menu = () => {
     <div>
       <AntMenu mode="horizontal" defaultSelectedKeys={["goTo"]}>
         <AntMenu.SubMenu key="SubMenu1" title="Go to" icon={<SettingOutlined />}>
-          {GoTo.map((tag, i) => {
+          {GoTo.map((tag: any, i: number) => {
             const { icons, context, cordinate } = tag;
             return (
               <AntMenu.Item
@@ -70,9 +70,6 @@ const Menu = () => {
             </AntMenu.SubMenu>
           </AntMenu.ItemGroup>
         </AntMenu.SubMenu>
-        <div style={{ position: "absolute", right: 0, bottom: 0 }}>
-          {/* lat: {positionData?.lat} lon: {positionData?.long} yükseklik: {positionData?.height} */}
-        </div>
       </AntMenu>
     </div>
   );

@@ -1,7 +1,7 @@
 import { ArcGisMapServerImageryProvider } from "cesium";
 import { ImageryLayer as Layer } from "resium";
 
-import { IFrame } from "@/interfaces/Layer";
+import { IFrame } from "@/interfaces/globe/Layer";
 // TODO 1
 /**
  * url'i dokümandaki gibi memolize et
