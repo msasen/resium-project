@@ -5,7 +5,7 @@ import CheckBoxForMenu from "@/components/Menu/FrameControl/Index";
 import { Frame } from "@/enum";
 import { useDispatch, useSelector } from "@/hooks/storeHook";
 import { IThreeDimensionalCoordinate } from "@/interfaces/common/index";
-import mapSlice from "@/modules/Globe/goOnGlobe/store/goOnGlobeSlice";
+import goOnGlobeSlice from "@/modules/Globe/goOnGlobe/store/goOnGlobeSlice";
 // import { IgetMousePointPosition } from "@/Toolbox/interface";
 
 // type Iprops = { positionData: IgetMousePointPosition };
@@ -14,7 +14,7 @@ const Menu = () => {
   // const { positionData } = props;
   const GoTo = useSelector(state => state.menu);
   const dispatch = useDispatch();
-  const { updateCoordinateToGo } = mapSlice.actions;
+  const { updateCoordinateToGo } = goOnGlobeSlice.actions;
   const goTo = (cordinate: IThreeDimensionalCoordinate) => {
     dispatch(updateCoordinateToGo(cordinate));
   };

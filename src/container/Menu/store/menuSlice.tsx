@@ -1,15 +1,15 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { DropdownItems } from "@/helpers/convertCordinateListToDropdownItem";
 import { IDropdownItems } from "@/interfaces/menu/Index";
 
-const initialState = DropdownItems;
+import { state } from "./state";
 
+const initialState = state;
 const menuSlice = createSlice({
   name: "menu",
   initialState,
   reducers: {
-    update: (state, action: PayloadAction<IDropdownItems>) => {
+    addCoordinatesToTheMenu: (state, action: PayloadAction<IDropdownItems>) => {
       return {
         ...state,
         GoToItem: [...state, action.payload],

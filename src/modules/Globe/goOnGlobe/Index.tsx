@@ -6,7 +6,7 @@ import { useSelector } from "@/hooks/storeHook";
 type Props = {};
 
 const CametraAnimation = (args: Props) => {
-  const { twoDimensionalCoordinates, alt } = useSelector(state => state.map);
+  const { twoDimensionalCoordinates, alt } = useSelector(state => state.goOnGlobe);
   const cordinate = Cartesian3.fromDegrees(
     twoDimensionalCoordinates[0],
     twoDimensionalCoordinates[1],

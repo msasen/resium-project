@@ -3,7 +3,7 @@ import { Slider as AntdSlider } from "antd";
 import { Frame } from "@/enum";
 import { useDispatch } from "@/hooks/storeHook";
 import { ILayer } from "@/interfaces/globe/Layer";
-import opacitySlice from "@/store/slice/opacitySlice";
+import opacitySlice from "@/modules/Menu/Slider/store/layerSlice";
 
 type ISlider = {
   disabled: boolean;
@@ -15,13 +15,13 @@ const Slider = (props: ISlider) => {
 
   const dispatch = useDispatch();
   const {
-    NatGeo_World_Map,
-    world_Imagery,
-    world_Physical_Map,
-    world_Shaded_Relief,
-    world_Street_Map,
-    world_Terrain_Base,
-    world_Topo_Map,
+    updateNatGeoWorldMap,
+    updateWorldImagery,
+    updateWorldPhysicalMap,
+    updateWorldShadedRelief,
+    updateWorldWTerrainBase,
+    updateworldStreetMap,
+    updateworldTopoMap,
   } = opacitySlice.actions;
   function getValue(params: number) {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -31,25 +31,25 @@ const Slider = (props: ISlider) => {
     };
 
     if (id === Frame.world_Imagery) {
-      dispatch(world_Imagery(layer));
+      dispatch(updateNatGeoWorldMap(layer));
     }
     if (id === Frame.world_Physical_Map) {
-      dispatch(world_Physical_Map(layer));
+      dispatch(updateWorldImagery(layer));
     }
     if (id === Frame.world_Shaded_Relief) {
-      dispatch(world_Shaded_Relief(layer));
+      dispatch(updateWorldPhysicalMap(layer));
     }
     if (id === Frame.world_Street_Map) {
-      dispatch(world_Street_Map(layer));
+      dispatch(updateWorldShadedRelief(layer));
     }
     if (id === Frame.world_Terrain_Base) {
-      dispatch(world_Terrain_Base(layer));
+      dispatch(updateWorldWTerrainBase(layer));
     }
     if (id === Frame.world_Topo_Map) {
-      dispatch(world_Topo_Map(layer));
+      dispatch(updateworldStreetMap(layer));
     }
     if (id === Frame.NatGeo_World_Map) {
-      dispatch(NatGeo_World_Map(layer));
+      dispatch(updateworldTopoMap(layer));
     }
   }
   return <AntdSlider defaultValue={30} onChange={value => getValue(value)} disabled={disabled} />;

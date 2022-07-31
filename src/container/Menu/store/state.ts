@@ -11,9 +11,9 @@ const theWhiteHouse: IThreeDimensionalCoordinate = {
 
 const theWhiteHouseHeader: IThreeDimensionalCoordinateHeader = {
   cordinate: theWhiteHouse,
-  name: "the White House",
-  logo: "",
-  id: 1,
+  context: "go to the White House",
+  icons: "",
+  key: 1,
 };
 
 const mavinci: IThreeDimensionalCoordinate = {
@@ -23,9 +23,9 @@ const mavinci: IThreeDimensionalCoordinate = {
 
 const mavinciHeader: IThreeDimensionalCoordinateHeader = {
   cordinate: mavinci,
-  name: "mavinci",
-  logo: "",
-  id: 1,
+  context: "go to mavinci",
+  icons: "",
+  key: 1,
 };
 
 const anıtkabir: IThreeDimensionalCoordinate = {
@@ -35,9 +35,9 @@ const anıtkabir: IThreeDimensionalCoordinate = {
 
 const anıtkabirHeader: IThreeDimensionalCoordinateHeader = {
   cordinate: anıtkabir,
-  name: "anıtkabir",
-  logo: "",
-  id: 1,
+  context: "go to anıtkabir",
+  icons: "",
+  key: 1,
 };
 
 const beyogli: IThreeDimensionalCoordinate = {
@@ -47,11 +47,11 @@ const beyogli: IThreeDimensionalCoordinate = {
 
 const beyogliHeader: IThreeDimensionalCoordinateHeader = {
   cordinate: theWhiteHouse,
-  name: "beyogli",
-  logo: "",
-  id: 1,
+  context: "go to beyogli",
+  icons: "",
+  key: 1,
 };
 
-const cordinateList = [beyogliHeader, anıtkabirHeader, mavinciHeader, theWhiteHouseHeader];
+const state = [beyogliHeader, anıtkabirHeader, mavinciHeader, theWhiteHouseHeader];
 
-export { beyogli, anıtkabir, mavinci, theWhiteHouse, cordinateList };
+export { beyogli, anıtkabir, mavinci, theWhiteHouse, state };
