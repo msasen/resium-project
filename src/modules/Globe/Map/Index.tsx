@@ -7,7 +7,6 @@ import { getMousePointPosition } from "@/helpers/getMousePointPosition";
 import { useDispatch } from "@/hooks/storeHook";
 import { Iref } from "@/interfaces/Toolbox/Toolbox";
 import CameraAnimation from "@/modules/Globe/CameraAnimation/Index";
-import Line from "@/modules/Globe/Draw_old/Line/Index";
 import positionSlice from "@/store/slice/positionData";
 
 import Draw from "../Draw/Index";
@@ -57,7 +56,6 @@ const Map = (_args: Props) => {
         <ScreenSpaceEvent action={handleMouseMoveEvent} type={ScreenSpaceEventType.LEFT_CLICK} />
       </ScreenSpaceEventHandler>
       <CameraAnimation />
-      <Line />
       <Draw />
       {/* <Write /> */}
     </VieverResium>

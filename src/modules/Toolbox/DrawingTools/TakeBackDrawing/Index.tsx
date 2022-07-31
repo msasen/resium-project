@@ -5,7 +5,7 @@ import DrawSlice from "@/modules/Globe/Draw/store/DrawSlice";
 type Props = {};
 
 const TakeBackDrawing = (_props: Props) => {
-  const { activeButton } = useSelector(store => store.takeBackDrawing);
+  // const { activeButton } = useSelector(store => store.takeBackDrawing);
   const dispatch = useDispatch();
   const { TakeBackDrawing } = DrawSlice.actions;
 

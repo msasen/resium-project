@@ -8,7 +8,6 @@ import takeBackDrawingSlice from "@/modules/Toolbox/DrawingTools/TakeBackDrawing
 import styleToolsSlice from "@/modules/Toolbox/StyleTools/store/drawingToolsSlice";
 import mapSlice from "@/store/slice/mapSlice";
 
-import lineDrawSlice from "./slice/drawLine";
 import menuSlice from "./slice/menuSlice";
 import opacitySlice from "./slice/opacitySlice";
 import positionSlice from "./slice/positionData";
@@ -19,7 +18,6 @@ const store = configureStore({
     menu: menuSlice.reducer,
     opacity: opacitySlice.reducer,
     position: positionSlice.reducer,
-    drawLinw: lineDrawSlice.reducer,
     drawSlice: DrawSlice.reducer,
     toolBox: toolBoxSlice.reducer,
     drawingTools: drawingToolsSlice.reducer,
