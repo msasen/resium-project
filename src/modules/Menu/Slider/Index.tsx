@@ -3,7 +3,7 @@ import { Slider as AntdSlider } from "antd";
 import { Frame } from "@/enum";
 import { useDispatch } from "@/hooks/storeHook";
 import { ILayer } from "@/interfaces/globe/Layer";
-import opacitySlice from "@/modules/Menu/Slider/store/layerSlice";
+import layerSlice from "@/modules/Menu/Slider/store/layerSlice";
 
 type ISlider = {
   disabled: boolean;
@@ -22,7 +22,7 @@ const Slider = (props: ISlider) => {
     updateWorldWTerrainBase,
     updateworldStreetMap,
     updateworldTopoMap,
-  } = opacitySlice.actions;
+  } = layerSlice.actions;
   function getValue(params: number) {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const layer: ILayer = {

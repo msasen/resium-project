@@ -3,7 +3,7 @@ import { Arcgis } from "@/enum";
 import { useSelector } from "@/hooks/storeHook";
 
 const ImageryLayer = () => {
-  const imageryLayer = useSelector(state => state.opacity);
+  const imageryLayer = useSelector(state => state.layer);
   const {
     NatGeo_World_Map,
     world_Imagery,
