@@ -13,17 +13,17 @@ const Draw = () => {
     <Fragment>
       {drawings.map((drawing, i) => (
         <Fragment key={i}>
-          <ListItem drawing={drawing.data} color={drawing.color} />
+          <ListItem drawing={drawing.data} color={drawing.color} stroke={drawing.stroke} />
         </Fragment>
       ))}
     </Fragment>
   );
 };
 
-type IProps = { drawing: IDrawing; color: Color };
+type IProps = { drawing: IDrawing; color: Color; stroke: number };
 const ListItem = memo(function ListItem(porps: IProps) {
-  const { drawing, color } = porps;
-  return <GeoJsonDataSource data={drawing} strokeWidth={10} stroke={color} />;
+  const { drawing, color, stroke } = porps;
+  return <GeoJsonDataSource data={drawing} strokeWidth={stroke} stroke={color} />;
 });
 
 export default Draw;

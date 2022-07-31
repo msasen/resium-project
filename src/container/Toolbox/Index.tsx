@@ -9,9 +9,11 @@ import "./style.css";
 <img src="/path/to/image.svg" alt="SVG as an image">
 */
 
+import TakeBackDrawing from "@/modules/Toolbox/DrawingTools/TakeBackDrawing/Index";
 import Line from "@/modules/Toolbox/Line/Index";
 import Polygon from "@/modules/Toolbox/Polygon/Indx";
 import StyleTools from "@/modules/Toolbox/StyleTools/Index";
+import TakeBackCordinate from "@/modules/Toolbox/TakeBackCordinate/Index";
 import Text from "@/modules/Toolbox/Text/Index";
 
 function Toolbox() {
@@ -21,6 +23,10 @@ function Toolbox() {
       <Line />
       <Polygon />
       <Text />
+      <div id="take-back-menu">
+        <TakeBackDrawing />
+        <TakeBackCordinate />
+      </div>
     </div>
   );
 }

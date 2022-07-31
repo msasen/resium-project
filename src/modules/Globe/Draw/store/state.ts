@@ -1,5 +1,3 @@
-import { Color } from "cesium";
-
 type ICoordinates = any[];
 
 export interface IGeometry {
@@ -17,7 +15,8 @@ export interface IDrawing {
 }
 export interface IDrawWithColor {
   data: IDrawing;
-  color: Color;
+  color: any;
+  stroke: number;
 }
 export type { ICoordinates };
 

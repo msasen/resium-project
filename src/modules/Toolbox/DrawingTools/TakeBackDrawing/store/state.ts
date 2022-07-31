@@ -7,9 +7,7 @@ export enum ActiveButton {
 export type IActiveButton = ActiveButton;
 export type IState = {
   activeButton: IActiveButton[];
-  activeColorButton: string;
 };
 export const state: IState = {
   activeButton: [ActiveButton.ANY, ActiveButton.LINE],
-  activeColorButton: "YELLOW",
 };

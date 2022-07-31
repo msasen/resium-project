@@ -1,4 +1,3 @@
-import { Color } from "cesium";
 import { useEffect } from "react";
 
 import LineIcons from "@/components/Common/Icons/LineIcons";
@@ -7,7 +6,6 @@ import toolBoxSlice from "@/container/Toolbox/store/toolBoxSlice";
 import { useDispatch, useSelector } from "@/hooks/storeHook";
 import DrawSlice from "@/modules/Globe/Draw/store/DrawSlice";
 import { ICoordinates, IDrawWithColor } from "@/modules/Globe/Draw/store/state";
-import DrawingTools from "@/modules/Toolbox/DrawingTools/Index";
 
 type Props = {};
 const Feature: IDrawWithColor = {
@@ -24,15 +22,16 @@ const Feature: IDrawWithColor = {
       },
     ],
   },
-  color: Color.YELLOW,
+  color: { red: 1, green: 1, blue: 0, alpha: 1 },
+  stroke: 10,
 };
 
 const Line = (_props: Props) => {
   const { lat, long } = useSelector(store => store.position);
   const { activeButton } = useSelector(store => store.toolBox);
-
+  const { activeColorButton } = useSelector(state => state.drawingTools);
   const dispatch = useDispatch();
-  const { addPoitIOnLastLine } = DrawSlice.actions;
+  const { addPoitIOnLastLine, updateColor } = DrawSlice.actions;
   const { addShape } = DrawSlice.actions;
   const { update } = toolBoxSlice.actions;
   const InitilizeFeature = () => {
@@ -41,6 +40,7 @@ const Line = (_props: Props) => {
   useEffect(() => {
     if (activeButton === ActiveButton.LINE) {
       const coordinate: ICoordinates = [long, lat];
+      dispatch(updateColor(activeColorButton));
       dispatch(addPoitIOnLastLine(coordinate));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -50,13 +50,12 @@ const Line = (_props: Props) => {
     <div>
       <button
         className="block"
-        style={{ background: "#1890ff", width: "57px", borderRadius: "5px" }}
+        style={{ background: "#1890ff" }}
         onClick={() => {
           dispatch(update(ActiveButton.ANY));
         }}>
-        Kaydet
+        <LineIcons fill="" />
       </button>
-      <DrawingTools />
     </div>
   ) : (
     <button

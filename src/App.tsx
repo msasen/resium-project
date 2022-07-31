@@ -1,5 +1,6 @@
 import * as Cesium from "cesium";
 
+import Toolbox from "@/container/Toolbox/Index";
 import Map from "@/modules/Globe/Map/Index";
 
 // import OnClick from "./Test/OnClick";
@@ -11,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Map />
-      {/* <OnClick /> */}
+      <Toolbox />
     </div>
   );
 }

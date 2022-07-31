@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import { Viewer as VieverResium, ScreenSpaceEventHandler, ScreenSpaceEvent } from "resium";
 
 import Menu from "@/container/Menu/Index";
-import Toolbox from "@/container/Toolbox/Index";
 import { getMousePointPosition } from "@/helpers/getMousePointPosition";
 import { useDispatch } from "@/hooks/storeHook";
 import { Iref } from "@/interfaces/Toolbox/Toolbox";
@@ -52,7 +51,6 @@ const Map = (_args: Props) => {
       <div style={{ position: "absolute", bottom: 0, left: 0, width: "100vw" }}>
         <Menu />
       </div>
-      <Toolbox />
       {/* <EventHandler ref={getRef} /> */}
       {/* mause hareket ettirildiğinde alt componentler yeniden render olmuyor. */}
       <ScreenSpaceEventHandler>

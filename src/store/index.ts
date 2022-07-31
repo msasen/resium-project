@@ -4,6 +4,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import toolBoxSlice from "@/container/Toolbox/store/toolBoxSlice";
 import DrawSlice from "@/modules/Globe/Draw/store/DrawSlice";
 import drawingToolsSlice from "@/modules/Toolbox/DrawingTools/store/drawingToolsSlice";
+import takeBackDrawingSlice from "@/modules/Toolbox/DrawingTools/TakeBackDrawing/store/takeBackDrawingSlice";
 import styleToolsSlice from "@/modules/Toolbox/StyleTools/store/drawingToolsSlice";
 import mapSlice from "@/store/slice/mapSlice";
 
@@ -23,6 +24,7 @@ const store = configureStore({
     toolBox: toolBoxSlice.reducer,
     drawingTools: drawingToolsSlice.reducer,
     styleTools: styleToolsSlice.reducer,
+    takeBackDrawing: takeBackDrawingSlice.reducer,
   },
 });
 

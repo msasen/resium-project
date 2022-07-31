@@ -1,4 +1,3 @@
-import { Color } from "cesium";
 import { useEffect } from "react";
 
 import Polyline from "@/components/Common/Icons/Polyline";
@@ -23,16 +22,17 @@ const Feature: IDrawWithColor = {
       },
     ],
   },
-
-  color: Color.YELLOW,
+  color: { red: 1, green: 1, blue: 0, alpha: 1 },
+  stroke: 11,
 };
 
 const Polygon = (_props: Props) => {
   const { lat, long } = useSelector(store => store.position);
   const { activeButton } = useSelector(store => store.toolBox);
+  const { activeColorButton } = useSelector(state => state.drawingTools);
 
   const dispatch = useDispatch();
-  const { addPoitIOnLastPolygon } = DrawSlice.actions;
+  const { addPoitIOnLastPolygon, updateColor } = DrawSlice.actions;
   const { addShape } = DrawSlice.actions;
   const { update } = toolBoxSlice.actions;
   const InitilizeFeature = () => {
@@ -41,6 +41,7 @@ const Polygon = (_props: Props) => {
   useEffect(() => {
     if (activeButton === ActiveButton.POLYGON) {
       const coordinate: ICoordinates = [long, lat];
+      dispatch(updateColor(activeColorButton));
       dispatch(addPoitIOnLastPolygon(coordinate));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -49,11 +50,11 @@ const Polygon = (_props: Props) => {
     <div>
       <button
         className="flex"
-        style={{ background: "#1890ff", width: "50px", borderRadius: "5px" }}
+        style={{ background: "#1890ff" }}
         onClick={() => {
           dispatch(update(ActiveButton.ANY));
         }}>
-        Kaydet
+        <Polyline />
       </button>
     </div>
   ) : (

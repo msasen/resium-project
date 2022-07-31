@@ -3,8 +3,8 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { state, IActiveButton } from "./state";
 
 const initialState = state;
-const drawingToolsSlice = createSlice({
-  name: "drawingTools",
+const takeBackDrawingSlice = createSlice({
+  name: "takeBackDrawing",
   initialState,
   reducers: {
     update: (state, action: PayloadAction<IActiveButton>) => {
@@ -13,14 +13,7 @@ const drawingToolsSlice = createSlice({
         activeButton: [...state.activeButton, action.payload],
       };
     },
-    UpdateActiveColorButton: (state, action: PayloadAction<string>) => {
-      console.log(action.payload);
-      return {
-        ...state,
-        activeColorButton: action.payload,
-      };
-    },
   },
 });
 
-export default drawingToolsSlice;
+export default takeBackDrawingSlice;
