@@ -1,5 +1,5 @@
 import TakeBackIcon from "@/components/Common/Icons/TakeBackIcon";
-import { useSelector, useDispatch } from "@/hooks/storeHook";
+import { useDispatch } from "@/hooks/storeHook";
 import DrawSlice from "@/modules/Globe/Draw/store/DrawSlice";
 
 type Props = {};

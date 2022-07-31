@@ -1,5 +1,5 @@
 import { cordinateList } from "@/data/cordinate";
-import { IDropdownItems } from "@/interfaces/Menu/Index";
+import { IDropdownItems } from "@/interfaces/menu/Index";
 
 const DropdownItems: IDropdownItems = [];
 cordinateList.map(data => {

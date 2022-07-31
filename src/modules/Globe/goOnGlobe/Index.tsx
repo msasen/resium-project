@@ -6,8 +6,12 @@ import { useSelector } from "@/hooks/storeHook";
 type Props = {};
 
 const CametraAnimation = (args: Props) => {
-  const { lat, lon, alt } = useSelector(state => state.map);
-  const cordinate = Cartesian3.fromDegrees(lat, lon, alt);
+  const { twoDimensionalCoordinates, alt } = useSelector(state => state.map);
+  const cordinate = Cartesian3.fromDegrees(
+    twoDimensionalCoordinates[0],
+    twoDimensionalCoordinates[1],
+    alt,
+  );
   return <CameraFlyTo {...args} destination={cordinate} />;
 };
 

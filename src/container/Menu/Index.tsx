@@ -4,8 +4,8 @@ import { Menu as AntMenu } from "antd";
 import CheckBoxForMenu from "@/components/Menu/FrameControl/Index";
 import { Frame } from "@/enum";
 import { useDispatch, useSelector } from "@/hooks/storeHook";
-import { Icordinate } from "@/interfaces/globe/Iresium";
-import mapSlice from "@/store/slice/mapSlice";
+import { IThreeDimensionalCoordinate } from "@/interfaces/common/index";
+import mapSlice from "@/modules/Globe/goOnGlobe/store/goOnGlobeSlice";
 // import { IgetMousePointPosition } from "@/Toolbox/interface";
 
 // type Iprops = { positionData: IgetMousePointPosition };
@@ -14,9 +14,9 @@ const Menu = () => {
   // const { positionData } = props;
   const GoTo = useSelector(state => state.menu);
   const dispatch = useDispatch();
-  const { update } = mapSlice.actions;
-  const goTo = (cordinate: Icordinate) => {
-    dispatch(update(cordinate));
+  const { updateCoordinateToGo } = mapSlice.actions;
+  const goTo = (cordinate: IThreeDimensionalCoordinate) => {
+    dispatch(updateCoordinateToGo(cordinate));
   };
   return (
     <div>

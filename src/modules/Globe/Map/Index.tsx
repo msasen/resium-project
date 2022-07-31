@@ -6,7 +6,7 @@ import Menu from "@/container/Menu/Index";
 import { getMousePointPosition } from "@/helpers/getMousePointPosition";
 import { useDispatch } from "@/hooks/storeHook";
 import { Iref } from "@/interfaces/Toolbox/Toolbox";
-import CameraAnimation from "@/modules/Globe/CameraAnimation/Index";
+import CameraAnimation from "@/modules/Globe/goOnGlobe/Index";
 import positionSlice from "@/store/slice/positionData";
 
 import Draw from "../Draw/Index";

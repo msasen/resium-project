@@ -3,10 +3,10 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import toolBoxSlice from "@/container/Toolbox/store/toolBoxSlice";
 import DrawSlice from "@/modules/Globe/Draw/store/DrawSlice";
+import mapSlice from "@/modules/Globe/goOnGlobe/store/goOnGlobeSlice";
 import drawingToolsSlice from "@/modules/Toolbox/DrawingTools/store/drawingToolsSlice";
 import takeBackDrawingSlice from "@/modules/Toolbox/DrawingTools/TakeBackDrawing/store/takeBackDrawingSlice";
 import styleToolsSlice from "@/modules/Toolbox/StyleTools/store/drawingToolsSlice";
-import mapSlice from "@/store/slice/mapSlice";
 
 import menuSlice from "./slice/menuSlice";
 import opacitySlice from "./slice/opacitySlice";

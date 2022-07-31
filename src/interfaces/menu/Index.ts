@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
 
-import { Icordinate } from "../globe/Iresium";
+import { IThreeDimensionalCoordinate } from "@/interfaces/common/index";
 
 export type IDropdownItem = {
   key: number;
   icons: ReactNode;
   context: string;
-  cordinate: Icordinate;
+  cordinate: IThreeDimensionalCoordinate;
 };
 
 export type IDropdownItems = IDropdownItem[];

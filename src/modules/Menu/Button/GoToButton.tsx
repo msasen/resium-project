@@ -3,7 +3,7 @@ import { Menu } from "antd";
 
 import { beyogli, anıtkabir, mavinci, theWhiteHouse } from "@/data/cordinate";
 import { useDispatch } from "@/hooks/storeHook";
-import MapSlice from "@/store/slice/mapSlice";
+import MapSlice from "@/modules/Globe/goOnGlobe/store/goOnGlobeSlice";
 
 const App = () => {
   const dispatch = useDispatch();
