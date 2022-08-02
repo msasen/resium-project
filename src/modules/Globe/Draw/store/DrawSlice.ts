@@ -10,10 +10,15 @@ const DrawSlice = createSlice({
   initialState,
   reducers: {
     addShape: (state, action: PayloadAction<IDrawWithColor>) => {
-      return {
-        ...state,
-        drawings: [...state.drawings, action.payload],
-      };
+      const lastNode = state.drawings[state.drawings.length - 1];
+      lastNode != undefined
+        ? lastNode.data.features[0].geometry.coordinates.length === 0 ||
+          lastNode.data.features[0].geometry.coordinates.length === 1
+          ? state.drawings.pop()
+          : null
+        : null;
+      state.drawings.push(action.payload);
+      return state;
     },
     addPoitIOnLastLine: (s, action: PayloadAction<ICoordinates>) => {
       const state: IDrawings = s;

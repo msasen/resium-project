@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import Polyline from "@/components/Common/Icons/Polyline";
+import Alert from "@/components/Toolbox/Popup/Index";
 import { ActiveButton } from "@/container/Toolbox/store/state";
 import toolBoxSlice from "@/container/Toolbox/store/toolBoxSlice";
 import { useDispatch, useSelector } from "@/hooks/storeHook";
@@ -27,6 +28,7 @@ const Feature: IDrawWithColor = {
 };
 
 const Polygon = (_props: Props) => {
+  const [clickCounter, SetClickCounter] = useState(0);
   const { lat, long } = useSelector(store => store.position);
   const { activeButton } = useSelector(store => store.toolBox);
   const { activeColorButton } = useSelector(state => state.drawingTools);
@@ -43,9 +45,16 @@ const Polygon = (_props: Props) => {
       const coordinate: ICoordinates = [long, lat];
       dispatch(updateColor(activeColorButton));
       dispatch(addPoitIOnLastPolygon(coordinate));
+      if (activeButton === ActiveButton.POLYGON) {
+        SetClickCounter(clickCounter + 1);
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lat, long]);
+  useEffect(() => {
+    activeButton != ActiveButton.LINE ? SetClickCounter(0) : null;
+  }, [activeButton]);
+
   return activeButton === ActiveButton.POLYGON ? (
     <div>
       <button
@@ -56,6 +65,21 @@ const Polygon = (_props: Props) => {
         }}>
         <Polyline />
       </button>
+      {clickCounter === 0 ? (
+        <Alert
+          message="Bilgilendirme"
+          description={`lütfen ilk noktayı seçiniz`}
+          showIcon
+          type="warning"
+        />
+      ) : (
+        <Alert
+          message="Bilgilendirme"
+          description={`lütfen ${clickCounter} noktayı seçiniz`}
+          showIcon
+          type="info"
+        />
+      )}
     </div>
   ) : (
     <button

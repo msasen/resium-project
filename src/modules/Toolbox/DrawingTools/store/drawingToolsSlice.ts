@@ -14,7 +14,7 @@ const drawingToolsSlice = createSlice({
       };
     },
     UpdateActiveColorButton: (state, action: PayloadAction<string>) => {
-      console.log(action.payload);
+      ////console.log(action.payload);
       return {
         ...state,
         activeColorButton: action.payload,

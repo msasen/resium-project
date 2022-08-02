@@ -7,19 +7,21 @@ import { useSelector } from "@/hooks/storeHook";
 import { IDrawing } from "./store/state";
 
 const Draw = () => {
-  const { drawings } = useSelector(store => store.drawSlice);
+  const data = useSelector(store => store.drawSlice);
+  const { drawings } = data;
 
   return (
     <Fragment>
-      {drawings.map((drawing, i) => (
-        <Fragment key={i}>
-          <ListItem drawing={drawing.data} color={drawing.color} stroke={drawing.stroke} />
-        </Fragment>
-      ))}
+      {drawings.map((drawing, i) => {
+        return (
+          <Fragment key={i}>
+            <ListItem drawing={drawing.data} color={drawing.color} stroke={drawing.stroke} />
+          </Fragment>
+        );
+      })}
     </Fragment>
   );
 };
-
 type IProps = { drawing: IDrawing; color: Color; stroke: number };
 const ListItem = memo(function ListItem(porps: IProps) {
   const { drawing, color, stroke } = porps;

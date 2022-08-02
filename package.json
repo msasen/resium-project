@@ -16,6 +16,8 @@
     "@emotion/styled": "^11.9.3",
     "@mui/material": "^5.9.1",
     "@reduxjs/toolkit": "^1.8.3",
+    "@turf/area": "^6.5.0",
+    "@turf/center-of-mass": "^6.5.0",
     "antd": "^4.21.7",
     "cesium": "1.95.0",
     "react": "^18.2.0",
@@ -24,13 +26,13 @@
     "resium": "^1.14.3"
   },
   "devDependencies": {
-    "eslint": "^8.19.0",
-    "eslint-config-reearth": "https://github.com/reearth/eslint-config-reearth.git#937f06f7a3e23702dfa8530ce5b5bd1dc4925763",
-    "prettier": "^2.7.1",
     "@types/node": "^18.0.6",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
+    "eslint": "^8.19.0",
+    "eslint-config-reearth": "https://github.com/reearth/eslint-config-reearth.git#937f06f7a3e23702dfa8530ce5b5bd1dc4925763",
+    "prettier": "^2.7.1",
     "typescript": "^4.7.4",
     "vite": "^3.0.0",
     "vite-plugin-cesium": "^1.2.19"

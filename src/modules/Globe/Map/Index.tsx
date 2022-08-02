@@ -11,6 +11,7 @@ import positionSlice from "@/store/slice/positionData";
 
 import Draw from "../Draw/Index";
 import AddImageryProviderModule from "../ImageryLayer/Index";
+import PrintDistance from "../PrintDistance/Index";
 
 type Props = {};
 const Map = (_args: Props) => {
@@ -50,6 +51,8 @@ const Map = (_args: Props) => {
       <div style={{ position: "absolute", bottom: 0, left: 0, width: "100vw" }}>
         <Menu />
       </div>
+
+      <PrintDistance />
       {/* <EventHandler ref={getRef} /> */}
       {/* mause hareket ettirildiğinde alt componentler yeniden render olmuyor. */}
       <ScreenSpaceEventHandler>

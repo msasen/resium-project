@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import LineIcons from "@/components/Common/Icons/LineIcons";
+import Alert from "@/components/Toolbox/Popup/Index";
 import { ActiveButton } from "@/container/Toolbox/store/state";
 import toolBoxSlice from "@/container/Toolbox/store/toolBoxSlice";
 import { useDispatch, useSelector } from "@/hooks/storeHook";
@@ -27,9 +28,11 @@ const Feature: IDrawWithColor = {
 };
 
 const Line = (_props: Props) => {
+  const [clickCounter, SetClickCounter] = useState(0);
   const { lat, long } = useSelector(store => store.position);
   const { activeButton } = useSelector(store => store.toolBox);
   const { activeColorButton } = useSelector(state => state.drawingTools);
+
   const dispatch = useDispatch();
   const { addPoitIOnLastLine, updateColor } = DrawSlice.actions;
   const { addShape } = DrawSlice.actions;
@@ -42,10 +45,16 @@ const Line = (_props: Props) => {
       const coordinate: ICoordinates = [long, lat];
       dispatch(updateColor(activeColorButton));
       dispatch(addPoitIOnLastLine(coordinate));
+      if (activeButton === ActiveButton.LINE) {
+        SetClickCounter(clickCounter + 1);
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lat, long]);
-  ActiveButton;
+  useEffect(() => {
+    activeButton != ActiveButton.LINE ? SetClickCounter(0) : null;
+  }, [activeButton]);
+
   return activeButton === ActiveButton.LINE ? (
     <div>
       <button
@@ -56,6 +65,21 @@ const Line = (_props: Props) => {
         }}>
         <LineIcons fill="" />
       </button>
+      {clickCounter === 0 ? (
+        <Alert
+          message="Bilgilendirme"
+          description={`lütfen ilk noktayı seçiniz`}
+          showIcon
+          type="warning"
+        />
+      ) : (
+        <Alert
+          message="Bilgilendirme"
+          description={`lütfen ${clickCounter} noktayı seçiniz`}
+          showIcon
+          type="info"
+        />
+      )}
     </div>
   ) : (
     <button
