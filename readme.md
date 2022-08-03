@@ -1,5 +1,5 @@
 
---prod: https://cesium-6466f.web.app/
+prod: https://cesium-6466f.web.app/
 # CesiumJS için msa-toolbox çizim aracının Dokümantasyonu ve başka bir projeye taşıma işlemi
 
 ## CesiumJS nedir?
