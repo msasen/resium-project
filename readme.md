@@ -1,6 +1,6 @@
 
 prod: https://cesium-6466f.web.app/
-# CesiumJS için msa-toolbox çizim aracının Dokümantasyonu ve başka bir projeye taşıma işlemi
+# CesiumJS için x-toolbox çizim aracının Dokümantasyonu ve başka bir projeye taşıma işlemi
 
 ## CesiumJS nedir?
 WebGL kullanarak coğrafi doğruluk ile dinamik verileri tarayıcıda görselleştirmek için oluşturulmuş bir kitaplıkıtr. Eklentilere ihtiyaç duymadan 3D küreler(Dünya vb.) ve 2D haritalar oluşturabilir.
@@ -16,15 +16,14 @@ toolbox lat lon ve height bilgileri ile 3D küreler üzerine çizim yapmayı ama
    1.  **Typescript**: Javascript'e type güvenliği sağlayan bir javascript kapsayıcısı
    2.  Alan ve ağırlık merkezi hesaplama için 100kb boyutunda **truf.js** paketleri
    3.  Code linting için **Eslint, prettier**
-
 kullanılmıştır. 
  ![Tux, the Linux mascot](/assets/dependencies.png)
 
-# msa-toolbox nasıl çalışır?
-Bu aşamaya girmeden önce toolbox'ın bulunduğu projenin mimarisi ve dosya yapısını anlamamız gerekir.
+# x-toolbox nasıl çalışır?
+Bu aşamaya başlamadan önce toolbox'ın bulunduğu projenin mimarisi ve dosya yapısını anlamamız gerekir.
 
 ## Proje yapısı
- msa-toolbox staj süresinde geliştirdiğim ana cesium projesinde bulunamktadır. ve github projelerimden erişilebilir. Bu proje daha sonra parçalara ayrılmak üzere(toolbox, terrain provider gibi parçalar) herşey ayrı paketlerde tutulmaya çalışılmıştır
+ x-toolbox staj süresinde geliştirdiğim ana cesium projesinde bulunamktadır. ve github projelerimden erişilebilir. Bu proje daha sonra parçalara ayrılmak üzere(toolbox, terrain provider gibi parçalar) her şey ayrı paketlerde tutulmaya çalışılmıştır
 <br>📦src
 <br> ┣ 📂components
 <br> ┃ ┣ 📂Common
@@ -50,7 +49,7 @@ Bu aşamaya girmeden önce toolbox'ın bulunduğu projenin mimarisi ve dosya yap
 <br> ┃ ┗ 📂Toolbox
 <br> ┣ 📂store
 <br> ┃ ┣ 📂slice
-Yukarıdaki ağaçta görüldüğü üzere proje 9 temel klasörden oluşmaktadır bunlar
+Yukarıdaki ağaçta görüldüğü üzere proje 9 temel klasörden oluşmaktadır. Bunlar,
 1. Components: Yeniden kullanılan bileşenlerin bulunduğu klasördür. Burada oluşturulan bileşenlerin hiçbir data ile bağlantısı yoktur. gerektiğinde ilgili data props ile modules'den verilir. Bu durum farklı datalar ile birden fazla component oluşturma imkanı tanır bize. Güzel bir fikir vermesi açısından: https://www.componentdriven.org/
 2. container: kapsayıcıdır. React'ta bilşen mapping işlemleri genelde burada yapılır. Store ile doğrudan bağlantılıdır. Components lerin aksine tekrar kullanılma amacı güdül-meden tasarlanırlar
 3. data Titleset vb genel dataların bulunduğu katmandır. Eğer eldeki data genel bir data değilse her modülün içinde store/state.ts altında saklanır.
@@ -179,3 +178,4 @@ map mause kordinatlarının hesaplandığı modül
 <br>çizginin uzunluğunu al
 <br>iki kordinatın arasındaki metre 
 <br>mause pozisyonlarını hesapla
+[terrain docs](https://github.com/msasen/resium-project/edit/main/readme.md)
