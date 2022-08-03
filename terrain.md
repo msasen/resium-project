@@ -23,7 +23,8 @@ https://github.com/geo-data/cesium-terrain-server
       }
 
 
-# Tüm adımların gerçekleştiği bir server https://drive.google.com/file/d/1PRJlsG62m4ULmVgcWX7zlDZotLVx6byP/view 
+# Tüm adımların gerçekleştiği bir server
+https://drive.google.com/file/d/1PRJlsG62m4ULmVgcWX7zlDZotLVx6byP/view 
 
 > İşin ilerleyişini buradaki konudan takip ettim. Burada kullanılan yazılımlar güven vermesede adımlar konusunda çok fikir verdi.
 > Misal burada bahsedilen dataseti güvenli bir kaynaktan indirdim. Burada bahsedilen tif birleştirmeyi gdal gibi open-source bir yazılımla gerçekleştirdim. ve son olarak build işlemini open source cesium terrain builder ile gerçekleştirdim. 
