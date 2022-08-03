@@ -179,4 +179,4 @@ map mouse kordinatlarının hesaplandığı modül
 <br>iki kordinatın arasındaki metre 
 <br>mouse pozisyonlarını hesapla
 <br>
-<br>[terrain docs](https://github.com/msasen/resium-project/edit/main/readme.md)
+<br>[terrain docs](https://github.com/msasen/resium-project/blob/main/terrain.md)
