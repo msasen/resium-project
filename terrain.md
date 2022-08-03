@@ -27,5 +27,5 @@ https://github.com/geo-data/cesium-terrain-server
 > Misal burada bahsedilen dataseti güvenli bir kaynaktan indirdim. Burada bahsedilen tif birleştirmeyi gdal gibi open-source bir yazılımla gerçekleştirdim. ve son olarak build işlemini open source cesium terrain builder ile gerçekleştirdim. 
 
 
-# Tüm adımların gerçekleştiği bir server
+# Tüm adımların gerçekleştiği bir örnek
 https://drive.google.com/file/d/1PRJlsG62m4ULmVgcWX7zlDZotLVx6byP/view 
