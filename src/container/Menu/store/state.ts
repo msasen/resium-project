@@ -5,7 +5,7 @@ import {
 // TODO2 Dataseti helpers olmadan çalışır hale getir
 // önce lon yaz
 const theWhiteHouse: IThreeDimensionalCoordinate = {
-  twoDimensionalCoordinates: [-77.037088, 38.897125],
+  twoDimensionalCoordinates: [44.296185, 39.70665],
   alt: 10000,
 };
 

@@ -18,7 +18,7 @@ const Feature: IDrawWithColor = {
         properties: {},
         geometry: {
           type: "LineString",
-          coordinates: [[0, 0]],
+          coordinates: [[0, 0, 0]],
         },
       },
     ],
@@ -29,7 +29,7 @@ const Feature: IDrawWithColor = {
 
 const Polygon = (_props: Props) => {
   const [clickCounter, SetClickCounter] = useState(0);
-  const { lat, long } = useSelector(store => store.position);
+  const { lat, long, height } = useSelector(store => store.position);
   const { activeButton } = useSelector(store => store.toolBox);
   const { activeColorButton } = useSelector(state => state.drawingTools);
 
@@ -50,7 +50,7 @@ const Polygon = (_props: Props) => {
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lat, long]);
+  }, [lat, long, height]);
   useEffect(() => {
     activeButton != ActiveButton.LINE ? SetClickCounter(0) : null;
   }, [activeButton]);

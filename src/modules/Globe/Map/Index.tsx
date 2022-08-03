@@ -52,15 +52,12 @@ const Map = (_args: Props) => {
         <Menu />
       </div>
 
-      <PrintDistance />
-      {/* <EventHandler ref={getRef} /> */}
-      {/* mause hareket ettirildiğinde alt componentler yeniden render olmuyor. */}
+      {/* <PrintDistance />*/}
       <ScreenSpaceEventHandler>
         <ScreenSpaceEvent action={handleMouseMoveEvent} type={ScreenSpaceEventType.LEFT_CLICK} />
       </ScreenSpaceEventHandler>
       <CameraAnimation />
       <Draw />
-      {/* <Write /> */}
     </VieverResium>
   );
 };

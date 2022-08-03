@@ -29,7 +29,7 @@ const Feature: IDrawWithColor = {
 
 const Line = (_props: Props) => {
   const [clickCounter, SetClickCounter] = useState(0);
-  const { lat, long } = useSelector(store => store.position);
+  const { lat, long, height } = useSelector(store => store.position);
   const { activeButton } = useSelector(store => store.toolBox);
   const { activeColorButton } = useSelector(state => state.drawingTools);
 
@@ -50,7 +50,7 @@ const Line = (_props: Props) => {
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lat, long]);
+  }, [lat, long, height]);
   useEffect(() => {
     activeButton != ActiveButton.LINE ? SetClickCounter(0) : null;
   }, [activeButton]);
