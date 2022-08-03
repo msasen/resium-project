@@ -166,7 +166,7 @@ interface -> toolbox interface leri içerir
 <br> ┃ ┃ ┃ ┗ 📜Index.tsx
 Draw çizimlerin haritaya eklendiği modül
 print distance mesafenin haritaya eklendiği modül
-map mause kordinatlarının hesaplandığı modül
+map mouse kordinatlarının hesaplandığı modül
 
 ## Kullsnılan Genel yardımcılar
 
@@ -177,5 +177,6 @@ map mause kordinatlarının hesaplandığı modül
 <br> ┃ ┗ 📜getMousePointPosition.ts
 <br>çizginin uzunluğunu al
 <br>iki kordinatın arasındaki metre 
-<br>mause pozisyonlarını hesapla
-[terrain docs](https://github.com/msasen/resium-project/edit/main/readme.md)
+<br>mouse pozisyonlarını hesapla
+<br>
+<br>[terrain docs](https://github.com/msasen/resium-project/edit/main/readme.md)
