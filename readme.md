@@ -1,4 +1,4 @@
-Deploy:
+#Deploy:
 <br>Çizim araçları olmadan:https://cesium-6466f.web.app/
 <br>Çizim araçları ile https://image-11bea.web.app/
 # CesiumJS için x-toolbox çizim aracının Dokümantasyonu ve başka bir projeye taşıma işlemi
