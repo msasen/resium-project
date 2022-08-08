@@ -30,4 +30,4 @@ https://github.com/geo-data/cesium-terrain-server
 # Tüm adımların gerçekleştiği bir örnek
 https://drive.google.com/file/d/1PRJlsG62m4ULmVgcWX7zlDZotLVx6byP/view 
 
-[ofline-map](https://github.com/msasen/resium-project/blob/main/ofline-map.md)
+[ofline-map](https://github.com/msasen/resium-project/blob/main/ofline-map)
