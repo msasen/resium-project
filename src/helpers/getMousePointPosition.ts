@@ -30,7 +30,6 @@ const getMousePointPosition = (
   const longitude = Number(CesiumMath.toDegrees(cartographic.longitude).toFixed(6));
   const latitude = Number(CesiumMath.toDegrees(cartographic.latitude).toFixed(6));
   const elevation = Math.ceil(globe.getHeight(cartographic) as number);
-  console.log(elevation);
   const height = Math.ceil(camera.positionCartographic.height) - elevation;
   return {
     long: longitude,

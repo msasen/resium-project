@@ -25,7 +25,6 @@ const Draw = () => {
 type IProps = { drawing: IDrawing; color: Color; stroke: number };
 const ListItem = memo(function ListItem(porps: IProps) {
   const { drawing, color, stroke } = porps;
-  console.log(drawing);
   return <GeoJsonDataSource data={drawing} strokeWidth={stroke} stroke={color} />;
 });
 

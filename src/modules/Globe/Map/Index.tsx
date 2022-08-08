@@ -1,5 +1,5 @@
-import { CesiumTerrainProvider, ScreenSpaceEventType } from "cesium";
-import Resource from "cesium/Source/Core/Resource";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { ScreenSpaceEventType, Resource } from "cesium";
 import { useEffect, useRef, useState } from "react";
 import { Viewer as VieverResium, ScreenSpaceEventHandler, ScreenSpaceEvent } from "resium";
 
@@ -47,24 +47,12 @@ const Map = (_args: Props) => {
   };
 
   return (
-    <VieverResium
-      terrainProvider={
-        new CesiumTerrainProvider({
-          url: new Resource({
-            url: "http://localhost:8000/terrain",
-          }),
-        })
-      }
-      full
-      timeline={false}
-      animation={false}
-      ref={ref}>
+    <VieverResium full timeline={false} animation={false} ref={ref}>
       <AddImageryProviderModule />
       <div style={{ position: "absolute", bottom: 0, left: 0, width: "100vw" }}>
         <Menu />
       </div>
-
-      {/* <PrintDistance />*/}
+      <PrintDistance />
       <ScreenSpaceEventHandler>
         <ScreenSpaceEvent action={handleMouseMoveEvent} type={ScreenSpaceEventType.LEFT_CLICK} />
       </ScreenSpaceEventHandler>
