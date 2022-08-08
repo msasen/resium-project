@@ -180,3 +180,9 @@ map mouse kordinatlarının hesaplandığı modül
 <br>mouse pozisyonlarını hesapla
 <br>
 <br>[terrain docs](https://github.com/msasen/resium-project/blob/main/terrain.md)
+
+Perfprmans önerileri
+import { Color, DistanceDisplayCondition } from "cesium";
+Color.RED Redux' da saklandığında serialize problemi yaşanıyor bunun yerine   color: { red: 1, green: 1, blue: 0, alpha: 1 }, kullanılmalıdır.
+
+
