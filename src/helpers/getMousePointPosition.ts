@@ -22,9 +22,10 @@ const getMousePointPosition = (
   camera: Camera,
   globe: Globe,
   Cartesian2: Cartesian2,
-  ellipsoid: Ellipsoid = Ellipsoid.WGS84,
+  scane: any,
+  ellipsoid: Ellipsoid = globe.ellipsoid,
 ) => {
-  const cartesian = camera.pickEllipsoid(Cartesian2) as Cartesian3;
+  const cartesian = scane.pickPosition(Cartesian2) as Cartesian3;
   if (!defined(cartesian)) return;
   const cartographic = ellipsoid.cartesianToCartographic(cartesian);
   const longitude = Number(CesiumMath.toDegrees(cartographic.longitude).toFixed(6));

@@ -33,6 +33,7 @@ const DrawSlice = createSlice({
       ] = action.payload;
       const firstCoordinate =
         state.drawings[state.drawings.length - 1].data.features[0].geometry.coordinates[0];
+
       state.drawings[state.drawings.length - 1].data.features[0].geometry.coordinates.push(
         firstCoordinate,
       );

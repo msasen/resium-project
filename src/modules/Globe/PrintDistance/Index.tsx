@@ -39,23 +39,7 @@ const Print = memo(function Print(props: any) {
       modelMatrix={Transforms.eastNorthUpToFixedFrame(
         Cartesian3.fromDegrees(data.mid.lng, data.mid.lat),
       )}>
-      {data.distance < 100 ? (
-        <Labels distance={700} text={`${data.distance.toString()} m.`} />
-      ) : data.distance < 100 ? (
-        <Labels distance={3500} text={`${data.distance.toString()} m.`} />
-      ) : data.distance < 500 ? (
-        <Labels distance={7000} text={`${data.distance.toString()} m.`} />
-      ) : data.distance < 1500 ? (
-        <Labels distance={50000} text={`${data.distance.toString()} m.`} />
-      ) : data.distance < 5000 ? (
-        <Labels distance={200000} text={`${data.distance.toString()} m.`} />
-      ) : data.distance < 25000 ? (
-        <Labels distance={600000} text={`${data.distance.toString()} m.`} />
-      ) : data.distance < 100000 ? (
-        <Labels distance={1000000} text={`${data.distance.toString()} m.`} />
-      ) : data.distance > 1000000 ? (
-        <Labels distance={600000} text={`${data.distance.toString()} m.`} />
-      ) : null}
+      <Labels distance={1000000} text={`${data.distance.toString()} m.`} />
     </LabelCollection>
   );
 });

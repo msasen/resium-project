@@ -21,6 +21,7 @@ const Map = (_args: Props) => {
   // const [getPosition, setPosition] = useState<IgetMousePointPosition>();
   useEffect(() => {
     if (ref.current?.cesiumElement) {
+      getRef.current.cesiumElement.scene.globe.depthTestAgainstTerrain = true;
       setRef(ref);
     }
   }, []);
@@ -40,7 +41,8 @@ const Map = (_args: Props) => {
     if (getRef.current === null) return;
     const camera = getRef.current.cesiumElement.camera;
     const globe = getRef.current.cesiumElement.scene.globe;
-    const positionData: any = getMousePointPosition(camera, globe, position);
+    const scane = getRef.current.cesiumElement.scene;
+    const positionData: any = getMousePointPosition(camera, globe, position, scane);
     // setPosition(positionData);
     const { update } = positionSlice.actions;
     dispatch(update(positionData));

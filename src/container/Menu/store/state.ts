@@ -17,7 +17,7 @@ const theWhiteHouseHeader: IThreeDimensionalCoordinateHeader = {
 };
 
 const mavinci: IThreeDimensionalCoordinate = {
-  twoDimensionalCoordinates: [32.737501, 39.863055],
+  twoDimensionalCoordinates: [44.293, 39.7104],
   alt: 10000,
 };
 
